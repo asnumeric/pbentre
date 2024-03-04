@@ -394,6 +394,7 @@
       white-space: nowrap;
       transition: 0.3s;
       position: relative;
+      text-decoration: none;
     }
   
     .navbar a i,
@@ -401,6 +402,7 @@
       font-size: 12px;
       line-height: 0;
       margin-left: 5px;
+      text-decoration: none;
     }
   
     .navbar>ul>li>a:before {
