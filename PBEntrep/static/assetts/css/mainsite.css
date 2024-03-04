@@ -2813,116 +2813,138 @@
             border-radius: 100%;
         }
       }
+      *,
 
-      .card {
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-        background-color: rgb(255, 255, 255);
-        backdrop-filter: blur(5px) saturate(10%) contrast(5%) brightness(40%);
-        margin-bottom: 30px;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0px 0 10px rgb(150, 150, 150);
-        margin: 0 auto; /* Centre horizontalement */
-        max-width: 500px;
+      *:before,
+      *:after{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
       }
       
-      .card-header,
-      .card-footer {
-        border-color: #ebeef4;
-        background-color: #ffffff00;
-        color: #798eb3;
-        padding: 15px;
+      form{
+          height: 420px;
+          width: 400px;
+          background-color: rgba(255,255,255,0.13);
+          position: absolute;
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          border: 2px solid rgba(255,255,255,0.1);
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+          padding: 50px 35px;
+      }
+      form *{
+          font-family: 'Poppins',sans-serif;
+          color: #ffffff;
+          letter-spacing: 0.5px;
+          outline: none;
+          
+      }
+      form h3{
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 42px;
+          text-align: center;
       }
       
-      .card-title {
-        padding: 20px 0 15px 0;
-        font-size: 18px;
-        color: rgb(0, 26, 175);
-        font-family: "Poppins", sans-serif;
-        font-weight: bold
+      label{
+          display: block;
+          margin-top: 30px;
+          font-size: 16px;
+          font-weight: 500;
+      }
+      input{
+          display: block;
+          height: 35px;
+          width: 100%;
+          background-color: rgba(255,255,255,0.07);
+          border-radius: 3px;
+          padding: 0 10px;
+          margin-top: 8px;
+          font-size: 14px;
+          font-weight: 300;
+          border-color: white;
+      }
+      .form-group .input-group select{
+          display: block;
+          height: 35px;
+          width: 100%;
+          background-color: rgba(255,255,255,0.07);
+          border-radius: 3px;
+          padding: 0 10px;
+          margin-top: 8px;
+          font-size: 14px;
+          font-weight: 300;
+          border-color: white;
+      }
+      ::placeholder{
+          color: #e5e5e5;
+      }
+      button{
+          border: none;
+          margin-top: 25px;
+          width: 100%;
+          color: #080710;
+          padding: 15px 0;
+          font-size: 18px;
+          font-weight: 600;
+          border-radius: 5px;
+          cursor: pointer;
+          color: white;
+          border-radius: 25px;
+          font-size: 16px; 
+          font-weight: bold;
+          background: -webkit-linear-gradient(left, rgb(255, 146, 146), #ff2121);
+          background: -o-linear-gradient(left, rgb(255, 146, 146), #ff2121);
+          background: -moz-linear-gradient(left, rgb(255, 146, 146), #ff2121);
+          background: linear-gradient(left, rgb(255, 146, 146), #ff2121);
       }
       
-      .card-body {
-        padding: 0 20px 20px 20px;
-        background: #ffffff00;
-        border-radius: 20px;
-        width: 100%;
-
-      }
-    
-      .card-body #con{
-        color: white;
-        border-radius: 25px; /* Coins arrondis */
-        padding: 10px 20px; /* Espacement du bouton */
-        font-size: 16px; /* Taille de la police */
-        font-weight: bold;
-        background: -webkit-linear-gradient(left, rgb(255, 146, 146), #ff2121);
-        background: -o-linear-gradient(left, rgb(255, 146, 146), #ff2121);
-        background: -moz-linear-gradient(left, rgb(255, 146, 146), #ff2121);
-        background: linear-gradient(left, rgb(255, 146, 146), #ff2121);
-      }
-    
       .card-body #con:hover{
-        -webkit-transition: all 8s;
-        -o-transition: all 8s;
-        -moz-transition: all 8s;
-        transition: all 8s;
-        background: #a70000;
-        background: -webkit-linear-gradient(left, #ff5757, rgb(255, 146, 146));
-        background: -o-linear-gradient(left, #ff5757,rgb(255, 146, 146));
-        background: -moz-linear-gradient(left, #ff5757, rgb(255, 146, 146));
-        background: linear-gradient(left, #ff5757,rgb(255, 146, 146));
-      }
-      
-      .card-body input{
-        animation-direction: normal;
-        -webkit-transition: all 2s;
-        -o-transition: all 2s;
-        -moz-transition: all 2s;
-        transition: all 1s;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-        background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-        -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-      }
-
-      .card {
-        animation: fadeIn 0.5s ease;
-      }
-      
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
+          -webkit-transition: all 8s;
+          -o-transition: all 8s;
+          -moz-transition: all 8s;
+          transition: all 8s;
+          background: #a70000;
+          background: -webkit-linear-gradient(left, #ff5757, rgb(255, 146, 146));
+          background: -o-linear-gradient(left, #ff5757,rgb(255, 146, 146));
+          background: -moz-linear-gradient(left, #ff5757, rgb(255, 146, 146));
+          background: linear-gradient(left, #ff5757,rgb(255, 146, 146));
+          border: none;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .social{
+        margin-top: 30px;
+        display: flex;
+      }
+      .social div{
+        background: red;
+        width: 150px;
+        border-radius: 3px;
+        padding: 5px 10px 10px 5px;
+        background-color: rgba(255,255,255,0.27);
+        color: #eaf0fb;
+        text-align: center;
+      }
+      .social div:hover{
+        background-color: rgba(255,255,255,0.47);
+      }
+      .social .fb{
+        margin-left: 25px;
+      }
+      .social i{
+        margin-right: 4px;
+      }
+      .bas{
+          font-size: 12px;
+          text-align: center;
+          margin-top:10px;
       }
       
-      /* Style pour le bouton de connexion */
-      #con {
-        background-color: #007bff; /* Couleur de fond */
-        border: none; /* Pas de bordure */
-        border-radius: 5px; /* Coins arrondis */
-        color: white; /* Couleur du texte */
-        padding: 10px 20px; /* Espacement intérieur */
-        font-size: 16px; /* Taille de la police */
-        transition: background-color 0.3s ease; /* Transition douce pour le survol */
+      #message{
+          color: red;
+          text-align: center;
+          margin-top: 10px;
       }
-      
-      #con:hover {
-        background-color: #0056b3; /* Couleur de fond au survol */
-      }
-      
-      /* Style pour le lien "Se Connecter" */
-      a {
-        color: #007bff; /* Couleur du lien */
-        text-decoration: none; /* Pas de soulignement */
-      }
-      
-      a:hover {
-        text-decoration: underline; /* Soulignement au survol */
-      }
-      

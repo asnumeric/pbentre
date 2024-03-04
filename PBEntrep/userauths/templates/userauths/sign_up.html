@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -30,24 +29,29 @@
   <link href="{% static 'assetts/css/mainsite.css' %}" rel="stylesheet">
 </head>
 
-<body style="background-image: url({% static 'assets/img/car3.jpg' %})">
+<body>
+  
   <main id="main">
-    <section id="services" class="services section-bg" >
-      <div class="container" data-aos="fade-up">
+    <section id="hero" class="hero">
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-item active" >
+          <video playsinline autoplay muted loop><source src="{% static 'assetts/img/sld.mp4' %}" type="video/mp4"></video>
+          <div class="info d-flex align-items-center">
+            <div class="container">
         
           <div class="card mb-3">
             <div class="card-body">
-                <div class="pt-4 pb-2">
-                  <h5 class="card-title text-center pb-0 fs-4">Bienvenue</h5>
-                    {% if messages %}
-                      {% for msg in messages %}
-                        <div id="message" class="alert alert-danger alert-dismissible fade show" role="alert">
-                          <p class="text-center small">{{msg}}</p>
-                        </div>
-                      {% endfor %}
-                    {% endif %}
-                </div>
                 <form class="row g-3 needs-validation" method="POST">
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Bienvenue</h5>
+                      {% if messages %}
+                        {% for msg in messages %}
+                          <div id="message" class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <p class="text-center small">{{msg}}</p>
+                          </div>
+                        {% endfor %}
+                      {% endif %}
+                  </div>
                   {% csrf_token %}
                   <div class="form-group">
                     <div class="input-group" >
@@ -77,17 +81,17 @@
                   <div class="col-12 text-center">
                     <button id="con" class="btn btn-outline-primary w-50" type="submit">Connexion</button>
                   </div>
-                  <div class="col-12 text-center" style="font-size: 13px;">
-                    Déjà un compte? <a class="small mb-2"  href="{% url 'login' %}"> <u> Se Connecter</u></a>
+                  <div class="bas col-12">
+                    Pas de compte? <a class="small mb-2"  href="{% url 'login' %}"> <u> Connexion</u></a>
                   </div>
-                  <div class="col-12">
-                    <p class="small mb-0 text-center">A tes resolution repondra le succes</p>
-                  </div>   
                 </form>
             </div>
           </div>
     </section>
   </main>
+
+
+
 
   <!-- ======= Footer ======= -->
   
